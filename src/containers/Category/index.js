@@ -1,24 +1,45 @@
-import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
-import { useNavigation } from '../../utils';
+import React, { useCallback } from 'react';
+import { Header, Card, Text } from '../../components';
+import { Container, List, Separator, EmptyContainer } from './styles';
+import useConnect from './connect';
 
 const Category = () => {
-  const { goBack } = useNavigation();
+  const { goBack, categoryName, booksByCategory } = useConnect();
+
+  const handleRenderItem = useCallback(
+    ({ item }) => (
+      <Card
+        uri={item.image}
+        title={item.title}
+        author={item.author}
+        synopsis={item.synopsis}
+      />
+    ),
+    [],
+  );
+
+  const extractItemKey = useCallback(item => item.id, []);
+
+  const handleRenderEmptyItem = useCallback(() => {
+    return (
+      <EmptyContainer>
+        <Text title="Empty list" />
+      </EmptyContainer>
+    );
+  }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>Category</Text>
-      <Button title="Atrás" onPress={goBack} />
-    </View>
+    <Container>
+      <Header onPressLeft={goBack} leftIcon="chevron" title={categoryName} />
+      <List
+        data={booksByCategory}
+        renderItem={handleRenderItem}
+        keyExtractor={extractItemKey}
+        ItemSeparatorComponent={Separator}
+        ListEmptyComponent={handleRenderEmptyItem}
+      />
+    </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default Category;

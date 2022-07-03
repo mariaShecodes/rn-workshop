@@ -10,9 +10,12 @@ const useConnect = () => {
 
   const recentBooks = BOOKS.slice(0, 3);
 
-  const handlePress = useCallback(() => {
-    navigate('Category');
-  }, [navigate]);
+  const handlePressCategory = useCallback(
+    ({ id, title }) => {
+      navigate('Category', { categoryId: id, categoryName: title });
+    },
+    [navigate],
+  );
 
   const handlePressIcon = useCallback(() => {
     console.log('Icon');
@@ -21,7 +24,7 @@ const useConnect = () => {
   return {
     safeBottom,
     recentBooks,
-    handlePress,
+    handlePressCategory,
     handlePressIcon,
   };
 };

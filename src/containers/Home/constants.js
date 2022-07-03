@@ -1,7 +1,7 @@
 export const CATEGORIES = [
   {
     id: 'pendiente',
-    title: 'Pendiente',
+    title: 'Pendientes',
   },
   {
     id: 'progreso',
@@ -9,10 +9,10 @@ export const CATEGORIES = [
   },
   {
     id: 'leído',
-    title: 'Leído',
+    title: 'Leídos',
   },
   {
     id: 'abandonado',
-    title: 'Abandonado',
+    title: 'Abandonados',
   },
 ];

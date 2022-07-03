@@ -5,14 +5,20 @@ import { CATEGORIES } from './constants';
 import useConnect from './connect';
 
 const Home = () => {
-  const { safeBottom, recentBooks, handlePressIcon } = useConnect();
+  const { safeBottom, recentBooks, handlePressCategory, handlePressIcon } =
+    useConnect();
 
   return (
     <Container>
       <Header onPressLeft={handlePressIcon} leftIcon="user" />
       <Categories>
         {CATEGORIES.map(elm => (
-          <Button key={elm.id} title={elm.title} onPress={handlePressIcon} />
+          <Button
+            key={elm.id}
+            id={elm.id}
+            title={elm.title}
+            onPress={handlePressCategory}
+          />
         ))}
       </Categories>
       <Body safeBottom={safeBottom}>

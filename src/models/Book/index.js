@@ -1,5 +1,6 @@
 export const BOOKS = [
   {
+    id: '001',
     title: 'Roma soy yo',
     author: 'Santiago Posteguillo',
     image:
@@ -12,6 +13,7 @@ export const BOOKS = [
     status: 'pendiente',
   },
   {
+    id: '002',
     title: 'Le petit prince',
     author: 'Antoine de Saint-Exupéry',
     image:
@@ -23,6 +25,7 @@ export const BOOKS = [
     status: 'leído',
   },
   {
+    id: '003',
     title: 'Sapiens : Une brève histoire de l’humanité',
     author: 'Yuval Noah Harari',
     image:
@@ -35,6 +38,7 @@ export const BOOKS = [
     status: 'abandonado',
   },
   {
+    id: '004',
     title: 'El libro negro de las horas',
     author: 'Eva García Sáenz de Urturi',
     image:
@@ -47,6 +51,7 @@ export const BOOKS = [
     status: 'leído',
   },
   {
+    id: '005',
     title: 'El Cuarto Mono',
     author: 'J.D Barker',
     image:
@@ -59,6 +64,7 @@ export const BOOKS = [
     status: 'progreso',
   },
   {
+    id: '006',
     title: 'Más allá del invierno',
     author: 'Allende Isabel',
     image:

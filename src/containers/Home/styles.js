@@ -7,7 +7,6 @@ import {
 
 export const Container = styled.View`
   flex: 1;
-  background-color: whitesmoke;
 `;
 
 export const Categories = styled.ScrollView.attrs({

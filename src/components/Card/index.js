@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import {
   Container,
   ImageContainer,
@@ -9,18 +9,26 @@ import {
 } from './styles';
 import Text from '../Text';
 
-const Card = ({ uri, title, author, synopsis, style }) => (
-  <Container style={style}>
-    <ImageContainer>
-      <Image source={{ uri }} />
-    </ImageContainer>
-    <InfoContainer>
-      <Text title={title} variant="title2" />
-      <Text title={author} variant="subtitle" />
-      <Section title="Sinopsis" variant="subtitle" />
-      <Synopsis title={synopsis} variant="subtitle" />
-    </InfoContainer>
-  </Container>
-);
+const Card = ({ id, uri, title, author, synopsis, onPress, style }) => {
+  const handlePress = useCallback(() => {
+    if (onPress) {
+      onPress(id);
+    }
+  }, [id, onPress]);
+
+  return (
+    <Container style={style} onPress={handlePress}>
+      <ImageContainer>
+        <Image source={{ uri }} />
+      </ImageContainer>
+      <InfoContainer>
+        <Text title={title} variant="title2" />
+        <Text title={author} variant="subtitle" />
+        <Section title="Sinopsis" variant="subtitle" />
+        <Synopsis title={synopsis} variant="subtitle" />
+      </InfoContainer>
+    </Container>
+  );
+};
 
 export default memo(Card);

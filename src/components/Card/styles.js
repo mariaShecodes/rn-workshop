@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Image as BaseImage } from 'react-native';
+import { Image as BaseImage, TouchableOpacity } from 'react-native';
 import Text from '../Text';
 
-export const Container = styled.View`
+export const Container = styled(TouchableOpacity)`
   flex-direction: row;
   height: 200px;
   box-shadow: 0px 4px 16px rgba(12, 27, 35, 0.04);

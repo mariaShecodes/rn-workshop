@@ -4,18 +4,21 @@ import { Container, List, Separator, EmptyContainer } from './styles';
 import useConnect from './connect';
 
 const Category = () => {
-  const { goBack, categoryName, booksByCategory } = useConnect();
+  const { goBack, categoryName, booksByCategory, handlePressItem } =
+    useConnect();
 
   const handleRenderItem = useCallback(
     ({ item }) => (
       <Card
+        id={item.id}
         uri={item.image}
         title={item.title}
         author={item.author}
         synopsis={item.synopsis}
+        onPress={handlePressItem}
       />
     ),
-    [],
+    [handlePressItem],
   );
 
   const extractItemKey = useCallback(item => item.id, []);

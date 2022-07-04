@@ -5,8 +5,13 @@ import { CATEGORIES } from './constants';
 import useConnect from './connect';
 
 const Home = () => {
-  const { safeBottom, recentBooks, handlePressCategory, handlePressIcon } =
-    useConnect();
+  const {
+    safeBottom,
+    recentBooks,
+    handlePressCategory,
+    handlePressIcon,
+    handlePressCard,
+  } = useConnect();
 
   return (
     <Container>
@@ -23,13 +28,15 @@ const Home = () => {
       </Categories>
       <Body safeBottom={safeBottom}>
         <Text title="Recientes" variant="title1" />
-        {recentBooks.map((book, index) => (
+        {recentBooks.map(book => (
           <Card
-            key={index}
+            key={book.id}
+            id={book.id}
             uri={book.image}
             title={book.title}
             author={book.author}
             synopsis={book.synopsis}
+            onPress={handlePressCard}
           />
         ))}
       </Body>

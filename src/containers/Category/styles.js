@@ -10,6 +10,7 @@ export const List = styled.FlatList.attrs({
     paddingHorizontal: 12,
     paddingBottom: 40,
   },
+  alwaysBounceVertical: false,
 })``;
 
 export const Separator = styled.View`

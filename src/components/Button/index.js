@@ -5,7 +5,7 @@ import Text from '../Text';
 const Button = ({ id, title, onPress, style }) => {
   const handlePress = useCallback(() => {
     if (onPress && id && title) {
-      onPress({ id, title });
+      onPress(id, title);
     }
   }, [id, title, onPress]);
 

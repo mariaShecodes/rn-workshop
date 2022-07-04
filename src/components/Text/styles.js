@@ -5,7 +5,7 @@ const variantStyles = {
   header: css`
     font-size: 16px;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 500;
   `,
   title1: css`
     font-size: 20px;

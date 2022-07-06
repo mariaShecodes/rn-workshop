@@ -5,6 +5,7 @@ import {
   Image,
   InfoContainer,
   Section,
+  Title,
   Synopsis,
 } from './styles';
 import Text from '../Text';
@@ -22,10 +23,10 @@ const Card = ({ id, uri, title, author, synopsis, onPress, style }) => {
         <Image source={{ uri }} />
       </ImageContainer>
       <InfoContainer>
-        <Text title={title} variant="title2" />
-        <Text title={author} variant="subtitle" />
-        <Section title="Sinopsis" variant="subtitle" />
-        <Synopsis title={synopsis} variant="subtitle" />
+        <Title>{title}</Title>
+        <Text variant="subtitle">{author}</Text>
+        <Section variant="subtitle">Sinopsis</Section>
+        <Synopsis variant="subtitle">{synopsis}</Synopsis>
       </InfoContainer>
     </Container>
   );

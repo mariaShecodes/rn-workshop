@@ -1,6 +1,5 @@
 import React, { memo, useCallback } from 'react';
-import { Container } from './styles';
-import Text from '../Text';
+import { Container, Text } from './styles';
 
 const Button = ({ id, title, onPress, style }) => {
   const handlePress = useCallback(() => {
@@ -11,7 +10,7 @@ const Button = ({ id, title, onPress, style }) => {
 
   return (
     <Container onPress={handlePress} style={style}>
-      <Text title={title} variant="button" />
+      <Text variant="button">{title}</Text>
     </Container>
   );
 };

@@ -15,4 +15,8 @@ export const CATEGORIES = [
     id: 'abandonado',
     title: 'Abandonados',
   },
+  {
+    id: 'all',
+    title: 'Todos',
+  },
 ];

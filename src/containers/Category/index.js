@@ -26,7 +26,7 @@ const Category = () => {
   const handleRenderEmptyItem = useCallback(() => {
     return (
       <EmptyContainer>
-        <Text title="Empty list" />
+        <Text>Empty list</Text>
       </EmptyContainer>
     );
   }, []);

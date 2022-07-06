@@ -3,9 +3,10 @@ import { Text } from 'react-native';
 
 const variantStyles = {
   header: css`
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 500;
+    color: #154c79;
   `,
   title1: css`
     font-size: 20px;
@@ -28,10 +29,10 @@ const variantStyles = {
     font-size: 14px;
     line-height: 21px;
     font-weight: 500;
-    color: white;
   `,
 };
 
 export const BaseText = styled(Text)`
+  color: #1e81b0;
   ${({ variant }) => variantStyles?.[variant]};
 `;

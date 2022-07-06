@@ -2,16 +2,25 @@ import React, { memo } from 'react';
 import { Container, Lateral, Center } from './styles';
 import Text from '../Text';
 import IconButton from '../IconButton';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-const Header = ({ onPressLeft, onPressRight, title, leftIcon, rightIcon }) => {
+const Header = ({
+  onPressLeft,
+  onPressRight,
+  title,
+  leftIcon,
+  rightIcon,
+  style,
+}) => {
+  const { top: safeTop } = useSafeAreaInsets();
   return (
-    <Container>
+    <Container safeTop={safeTop} style={style}>
       <Lateral>
         {onPressLeft && (
           <IconButton onPressIcon={onPressLeft} icon={leftIcon} />
         )}
       </Lateral>
-      <Center>{title && <Text title={title} variant="header" />}</Center>
+      <Center>{title && <Text variant="header">{title}</Text>}</Center>
       <Lateral right>
         {onPressRight && (
           <IconButton onPressIcon={onPressRight} icon={rightIcon} />

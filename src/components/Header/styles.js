@@ -4,7 +4,7 @@ export const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 16px 15px;
+  padding: ${({ safeTop }) => safeTop}px 16px 15px;
 `;
 
 export const Lateral = styled.View`

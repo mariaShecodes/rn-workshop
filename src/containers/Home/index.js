@@ -27,7 +27,7 @@ const Home = () => {
         ))}
       </Categories>
       <Body safeBottom={safeBottom}>
-        <Text title="Recientes" variant="title1" />
+        <Text variant="title1">Recientes</Text>
         {recentBooks.map(book => (
           <Card
             key={book.id}

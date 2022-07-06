@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Image as BaseImage, TouchableOpacity } from 'react-native';
-import Text from '../Text';
+import BaseText from '../Text';
 
 export const Container = styled(TouchableOpacity)`
   flex-direction: row;
@@ -24,17 +24,23 @@ export const Image = styled(BaseImage)`
 
 export const InfoContainer = styled.View`
   flex: 1.5;
-  padding: 8px 10px;
+  padding: 14px;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   background-color: white;
 `;
 
-export const Section = styled(Text)`
+export const Title = styled(BaseText).attrs({
+  variant: 'title2',
+})`
+  color: #154c79;
+`;
+
+export const Section = styled(BaseText)`
   margin-top: 12px;
   font-weight: 500;
 `;
 
-export const Synopsis = styled(Text)`
+export const Synopsis = styled(BaseText)`
   flex: 1;
 `;

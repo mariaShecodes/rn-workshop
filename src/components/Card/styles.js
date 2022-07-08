@@ -1,18 +1,16 @@
 import styled from 'styled-components';
-import { Image as BaseImage, TouchableOpacity } from 'react-native';
+import { View, Image as BaseImage, Pressable } from 'react-native';
 import BaseText from '../Text';
 
-export const Container = styled(TouchableOpacity)`
+export const Container = styled(Pressable)`
   flex-direction: row;
   height: 200px;
-  box-shadow: 0px 4px 16px rgba(12, 27, 35, 0.04);
-  elevation: 0.5;
 `;
 
-export const ImageContainer = styled.View`
+export const ImageContainer = styled(View)`
   flex: 1;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 `;
 
 export const Image = styled(BaseImage)`
@@ -22,7 +20,7 @@ export const Image = styled(BaseImage)`
   border-bottom-left-radius: 12px;
 `;
 
-export const InfoContainer = styled.View`
+export const InfoContainer = styled(View)`
   flex: 1.5;
   padding: 14px;
   border-top-right-radius: 12px;
@@ -38,7 +36,6 @@ export const Title = styled(BaseText).attrs({
 
 export const Section = styled(BaseText)`
   margin-top: 12px;
-  font-weight: 500;
 `;
 
 export const Synopsis = styled(BaseText)`

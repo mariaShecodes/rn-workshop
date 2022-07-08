@@ -1,12 +1,22 @@
 import React from 'react';
-import { Header } from '../../components';
-import { Container, Categories, Button, Body, Text, Card } from './styles';
+import { Text } from '../../components';
+import {
+  Container,
+  LogoContainer,
+  Logo,
+  LogoText,
+  Categories,
+  Button,
+  Body,
+  Card,
+} from './styles';
 import { CATEGORIES } from './constants';
 import useConnect from './connect';
 
 const Home = () => {
   const {
     safeBottom,
+    safeTop,
     recentBooks,
     handlePressCategory,
     handlePressIcon,
@@ -14,8 +24,11 @@ const Home = () => {
   } = useConnect();
 
   return (
-    <Container>
-      <Header onPressLeft={handlePressIcon} leftIcon="user" />
+    <Container safeTop={safeTop}>
+      <LogoContainer>
+        <Logo source={require('../../assets/icons/logo.png')} />
+        <Text variant="logo">LeeLibros</Text>
+      </LogoContainer>
       <Categories>
         {CATEGORIES.map(elm => (
           <Button

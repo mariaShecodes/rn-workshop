@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { View } from 'react-native';
 
-export const Container = styled.View`
+export const Container = styled(View)`
   flex: 1;
 `;
 
@@ -13,11 +14,11 @@ export const List = styled.FlatList.attrs({
   alwaysBounceVertical: false,
 })``;
 
-export const Separator = styled.View`
+export const Separator = styled(View)`
   height: 20px;
 `;
 
-export const EmptyContainer = styled.View`
+export const EmptyContainer = styled(View)`
   align-items: center;
   padding-top: 20px;
 `;

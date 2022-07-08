@@ -21,7 +21,7 @@ const Header = ({
         )}
       </Lateral>
       <Center>{title && <Text variant="header">{title}</Text>}</Center>
-      <Lateral right>
+      <Lateral isRight>
         {onPressRight && (
           <IconButton onPressIcon={onPressRight} icon={rightIcon} />
         )}

@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from 'react';
-import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { Image } from './styles';
 
 const IconButton = ({ onPressIcon, icon }) => {
   const userIcon = require('../../assets/icons/user.png');
@@ -18,16 +19,9 @@ const IconButton = ({ onPressIcon, icon }) => {
 
   return (
     <TouchableOpacity onPress={onPressIcon}>
-      <Image source={selectedIcon} style={sytles.image} />
+      <Image source={selectedIcon} />
     </TouchableOpacity>
   );
 };
-
-const sytles = StyleSheet.create({
-  image: {
-    height: 30,
-    aspectRatio: 1,
-  },
-});
 
 export default memo(IconButton);

@@ -35,6 +35,8 @@ const Details = () => {
         <Text>{book.author}</Text>
         <Subtitle>Sinopsis</Subtitle>
         <Text>{book.synopsis}</Text>
+        <Subtitle>Categoria</Subtitle>
+        <Text>{book.categories}</Text>
         <Horizontal>
           <Section>
             <Subtitle>Año</Subtitle>

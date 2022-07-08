@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Image as BaseImage } from 'react-native';
+import { View, Image as BaseImage } from 'react-native';
 import { Text as BaseText } from '../../components';
 
-export const Container = styled.View`
+export const Container = styled(View)`
   flex: 1;
   justify-content: space-between;
   background-color: #76b5c5;
@@ -10,10 +10,10 @@ export const Container = styled.View`
 
 export const Image = styled(BaseImage)`
   width: 100%;
-  height: 450px;
+  height: 400px;
 `;
 
-export const Top = styled.View`
+export const Top = styled(View)`
   height: 24px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
@@ -50,10 +50,10 @@ export const Text = styled(BaseText)`
   color: #1e81b0;
 `;
 
-export const Section = styled.View`
+export const Section = styled(View)`
   margin-left: ${({ hasMargin }) => (hasMargin ? 80 : 0)}px;
 `;
 
-export const Horizontal = styled.View`
+export const Horizontal = styled(View)`
   flex-direction: row;
 `;

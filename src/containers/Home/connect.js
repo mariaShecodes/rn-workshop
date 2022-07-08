@@ -4,7 +4,7 @@ import { BOOKS } from '../../models/Book';
 import { useNavigation } from '../../utils';
 
 const useConnect = () => {
-  const { bottom: safeBottom } = useSafeAreaInsets();
+  const { bottom: safeBottom, top: safeTop } = useSafeAreaInsets();
 
   const { navigate } = useNavigation();
 
@@ -17,10 +17,6 @@ const useConnect = () => {
     [navigate],
   );
 
-  const handlePressIcon = useCallback(() => {
-    console.log('Icon');
-  }, []);
-
   const handlePressCard = useCallback(
     id => {
       navigate('Details', { id });
@@ -30,9 +26,9 @@ const useConnect = () => {
 
   return {
     safeBottom,
+    safeTop,
     recentBooks,
     handlePressCategory,
-    handlePressIcon,
     handlePressCard,
   };
 };

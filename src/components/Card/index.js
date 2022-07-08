@@ -4,7 +4,6 @@ import {
   ImageContainer,
   Image,
   InfoContainer,
-  Section,
   Title,
   Synopsis,
 } from './styles';
@@ -25,7 +24,6 @@ const Card = ({ id, uri, title, author, synopsis, onPress, style }) => {
       <InfoContainer>
         <Title>{title}</Title>
         <Text variant="subtitle">{author}</Text>
-        <Section variant="subtitle">Sinopsis</Section>
         <Synopsis variant="subtitle">{synopsis}</Synopsis>
       </InfoContainer>
     </Container>

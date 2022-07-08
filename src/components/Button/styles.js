@@ -8,9 +8,9 @@ export const Container = styled(TouchableOpacity)`
   border-radius: 100px;
   justify-content: center;
   align-items: center;
-  background-color: #1e81b0;
+  background-color: ${({ theme }) => theme.colors.primary01};
 `;
 
 export const Text = styled(BaseText)`
-  color: #fafaf0;
+  color: ${({ theme }) => theme.colors.secondary01};
 `;

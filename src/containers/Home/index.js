@@ -4,7 +4,6 @@ import {
   Container,
   LogoContainer,
   Logo,
-  LogoText,
   Categories,
   Button,
   Body,
@@ -19,7 +18,6 @@ const Home = () => {
     safeTop,
     recentBooks,
     handlePressCategory,
-    handlePressIcon,
     handlePressCard,
   } = useConnect();
 

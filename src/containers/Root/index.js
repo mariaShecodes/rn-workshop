@@ -1,16 +1,20 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { ThemeProvider } from 'styled-components/native';
 import Navigator from '../../navigator';
+import theme from '../../theme';
 
 const Root = () => (
   <NavigationContainer>
-    <StatusBar
-      barStyle="dark-content"
-      backgroundColor="transparent"
-      translucent
-    />
-    <Navigator />
+    <ThemeProvider theme={theme}>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Navigator />
+    </ThemeProvider>
   </NavigationContainer>
 );
 

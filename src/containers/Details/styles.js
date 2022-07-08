@@ -5,19 +5,19 @@ import { Text as BaseText } from '../../components';
 export const Container = styled(View)`
   flex: 1;
   justify-content: space-between;
-  background-color: #76b5c5;
+  background-color: ${({ theme }) => theme.colors.primary03};
 `;
 
 export const Image = styled(BaseImage)`
   width: 100%;
-  height: 400px;
+  height: ${({ theme }) => theme.device.height / 2}px;
 `;
 
 export const Top = styled(View)`
   height: 24px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Body = styled.ScrollView.attrs(({ safeBottom }) => ({
@@ -28,7 +28,7 @@ export const Body = styled.ScrollView.attrs(({ safeBottom }) => ({
   },
   alwaysBounceVertical: false,
 }))`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Title = styled(BaseText).attrs({
@@ -36,18 +36,18 @@ export const Title = styled(BaseText).attrs({
 })`
   text-transform: uppercase;
   margin: 16px 0 10px;
-  color: #154c79;
+  color: ${({ theme }) => theme.colors.primary02};
 `;
 
 export const Subtitle = styled(BaseText).attrs({
   variant: 'title2',
 })`
   margin-top: 12px;
-  color: #154c79;
+  color: ${({ theme }) => theme.colors.primary02};
 `;
 
 export const Text = styled(BaseText)`
-  color: #1e81b0;
+  color: ${({ theme }) => theme.colors.primary01};
 `;
 
 export const Section = styled(View)`

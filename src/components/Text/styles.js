@@ -6,7 +6,7 @@ const variantStyles = {
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
-    color: #154c79;
+    color: ${({ theme }) => theme.colors.primary02};
   `,
   title1: css`
     font-size: 20px;
@@ -33,6 +33,6 @@ const variantStyles = {
 };
 
 export const BaseText = styled(Text)`
-  color: #1e81b0;
+  color: ${({ theme }) => theme.colors.primary01};
   ${({ variant }) => variantStyles?.[variant]};
 `;

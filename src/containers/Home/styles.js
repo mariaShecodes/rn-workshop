@@ -9,6 +9,7 @@ import {
 export const Container = styled(View)`
   flex: 1;
   padding-top: ${({ safeTop }) => safeTop + 8}px;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const LogoContainer = styled(View)`
